@@ -1,128 +1,193 @@
 <html>
     <head>
         <title>Webpage With Style</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
     
         <style type="text/css">
-        /*Internal CSS*/
-        /*Classes & IDs*/
-        .green{
-            color:teal;
-        }
 
-        .large{
-            font-size: 200%;
-        }
+            /*Internal CSS*/
+            /*Classes & IDs*/
+            .green{
+                color:teal;
+            }
 
-        #yellow{
-            color: yellow;
-        }
+            .large{
+                font-size: 200%;
+            }
 
-        .underlined{
-            text-decoration: underline;
-        }
+            #yellow{
+                color: yellow;
+            }
 
-        /*Divs & Floating*/
-        #firstSection{
-            color:brown;
-            background-color: #F1948A;
-            width: 200px;
-            float: left;
-        }
+            .underlined{
+                text-decoration: underline;
+            }
 
-        #secondSection{
-            background-color: #00FF97;
-            width: 200px;
-            float: right;
-        }
+            /*Divs & Floating*/
+            #firstSection{
+                color:brown;
+                background-color: #F1948A;
+                width: 200px;
+                float: left;
+            }
 
-        .clearFloat{
-            clear: both;
-        }
+            #secondSection{
+                background-color: #00FF97;
+                width: 200px;
+                float: right;
+            }
 
-        /*Positioning*/
-        #thirdSection{
-            color:brown;
-            background-color: #F1948A;
-            width: 200px;
-            position: relative;
-            left: 100px;
-            top: 100px;
-            z-index: 1;
-        }
-        
-        #fourthSection{
-            background-color: #00FF97;
-            width: 200px;
-            position: relative;
-            z-index: 2;
-            opacity: 0.5; /*Opacity runs on a scale of 0 to 1*/
+            .clearFloat{
+                clear: both;
+            }
 
-        }
-
-        #fifthSection{
-            color:brown;
-            background-color: #F1948A;
-            width: 400px;
-            position: absolute; /*Out of the flow of the page*/
-            left: 500px;
-            top: 200px;
-
-        }
-
-        #sixthSection{
-            background-color: #00FF97;
-            width: 200px;
-            position: fixed; /*Keeps the element fixed onto the page*/
-            left: 0;
-            top: 0;
-        }
-
-        /*Margins*/
-        #seventhSection{
-            color:brown;
-            background-color: #F1948A;
-            width: 200px;
-            margin: 100px 50px 20px 10px; /*This goes clockwise*/
-
-        }
-
-        #eighthSection{
-            background-color: #00FF97;
-            width: 400px;
-            margin: 50px 20px 0px 0px;
-            margin-bottom: 50px;
-            margin-left: 20px
-        }
-
-        /*Padding*/
-        #ninethSection{
-            color:brown;
-            background-color: #F1948A;
-            width: 200px;
-            padding: 5px 10px 11px 7px;/*Also goes clockwise*/
+            /*Positioning*/
+            #thirdSection{
+                color:brown;
+                background-color: #F1948A;
+                width: 200px;
+                position: relative;
+                left: 100px;
+                top: 100px;
+                z-index: 1;
+            }
             
+            #fourthSection{
+                background-color: #00FF97;
+                width: 200px;
+                position: relative;
+                z-index: 2;
+                opacity: 0.5; /*Opacity runs on a scale of 0 to 1*/
+            }
 
-        }
+            #fifthSection{
+                color:brown;
+                background-color: #F1948A;
+                width: 400px;
+                position: absolute; /*Out of the flow of the page*/
+                left: 500px;
+                top: 200px;
+            }
 
-        #tenthSection{
-            background-color: #00FF97;
-            width: 400px;
-            padding-top: 5px;
-            padding-right: 10px;
-            padding-bottom: 11px;
-            padding-left: 7px;
-            
-        }
+            #sixthSection{
+                background-color: #00FF97;
+                width: 200px;
+                position: fixed; /*Keeps the element fixed onto the page*/
+                left: 0;
+                top: 0;
+            }
 
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
+            /*Margins*/
+            #seventhSection{
+                color:brown;
+                background-color: #F1948A;
+                width: 200px;
+                margin: 100px 50px 20px 10px; /*This goes clockwise*/
+            }
 
-        p{
-            margin: 0px;
-            padding: 0px;
-        }
+            #eighthSection{
+                background-color: #00FF97;
+                width: 400px;
+                margin: 50px 20px 0px 0px;
+                margin-bottom: 50px;
+                margin-left: 20px
+            }
+
+            /*Padding*/
+            #ninethSection{
+                color:brown;
+                background-color: #F1948A;
+                width: 200px;
+                padding: 5px 10px 11px 7px;/*Also goes clockwise*/
+            }
+
+            #tenthSection{
+                background-color: #00FF97;
+                width: 400px;
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 11px;
+                padding-left: 7px; 
+            }
+            /*Look into a css reset file*/
+
+            /*Borders*/
+            #eleventhSection{
+                background-color: red;
+                border: 10px yellow solid;/* Three attributes: size, colour and type*/
+            }
+
+            #twelvethSection{
+                background-color: blue;
+                border-style: ridge solid dotted dashed;
+                border-color: tomato aqua gold khaki;
+                border-width: 10px 5px 2px 1px;
+            }
+
+            #thirteenthSection{
+                background-color: green;
+                border-radius: 50%;
+            }
+
+            .square{
+                width: 400px;
+                height: 400px;
+                margin: 40px;
+                float: left;
+            }
+
+            /*Styling text*/
+            .fontFamily{
+                font-family: 'Zen Kurenaido', sans-serif; /*The extra fonts are for fallback incase your preferred font is missing*/
+            }
+
+            .bold{
+                font-weight: bold;
+            }
+
+            .italics{
+                font-style: italic;
+            }
+
+            .big{
+                font-size: 200%;
+            }
+
+            /*Aligning Text*/
+            .alignText{
+                text-align: right;/*Alignment occurs relative to the parent element*/
+            }
+
+            .moreAlignText{
+                width: 300px;
+                height: 150px;
+                background-color: green;
+            }
+
+            .centeredText{
+                text-align: center;
+            }
+
+            .justifiedText{
+                text-align: justify;
+            }
+
+            /*Styling Links*/
+            a{
+                text-decoration: none;
+            }
+
+            a:hover{
+                text-decoration: underline;
+                color: green;
+            }
+
+            a:visited{
+                color:green;
+            }
 
         </style>
     </head>
@@ -227,6 +292,51 @@
             </div>
             <hr class="clearFloat">
 
+        </section>
+
+        <section>
+            <!--Borders-->
+            <div id="eleventhSection" class="square">
+            </div>
+
+            <div id="twelvethSection" class="square">
+            </div>
+
+            <div id="thirteenthSection" class="square">  
+            </div>
+            <hr class="clearFloat">
+
+        </section>
+
+        <section>
+            <!--Styling Text-->
+            <p class="fontFamily">This is some text</p>
+            <p class="bold">This is some text</p>
+            <p class="italics">This is some text <span class="bold">and this is bold & italic</span></p>
+            <p class="underlined">This text is underlined</p>
+            <a href="">This is a non underlined link</a>
+            <p class="big">This text is BIG!</p>
+            <hr class="clearFloat">
+        </section>
+
+        <section>
+            <!--Aligning Text-->
+            <p class="alignText">This is some text</p>
+            <div class="moreAlignText">
+                <p class="alignText">This is some more text</p>
+                <p class="centeredText">This is some centered text.</p>
+                <p class="justifiedText">This is some justified text.This is some justified text.This is some justified text.This is some justified text.This is some justified text.</p>
+            </div>
+            <hr class="clearFloat">            
+        </section>
+
+        <section>
+            <!--Styling Links-->
+            <div>
+                <p><a href="https://www.google.com">This goes to Google</a></p>
+                <p><a href="https://www.google.com" target="_blank">This goes to Google</a></p><!--The target attribute opens the link in a new tab-->
+            </div>
+            <hr class="clearFloat">            
         </section>
         
     </body>
