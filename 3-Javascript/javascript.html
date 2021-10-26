@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+        .circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
+
+        #circleRed {
+            background-color: red;
+        }
+
+        #circleGreen {
+            background-color: green;
+        }
+
+        #circleBlue {
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="text">Hello World</p>
+    <button id="myButton">Change Text.</button>
+    <P id="secondParagraph">javascript is </p>
+    <button id="myButton2">Change more text.</button>
+    <p id="emptyParagraph"></p>
+    <button id="myButton3">Create Text</button>
+    <P id="moreText">This is some text</P>
+    <button id="styleText">Style Text</button>
+    <hr>
+
+    <h2>Dissapearing Circles</h2>
+    <div class="circle" id="circleRed"></div>
+    <div class="circle" id="circleGreen"></div>
+    <div class="circle" id="circleBlue"></div>
+    <hr>
+
+    <h2>Variables</h2>
+    <input type="text" placeholder="Change the text" id="textInput">
+    <button id="textChanger">Change the text</button>
+    <p id="text2">This is some text.</p>
+    <hr>
+
+    <h2>IF Statements</h2>
+    <p>What is the magic word?</p>
+    <input type="text" placeholder="Magic Word Here" id="magicWordInput">
+    <button id="magicWordButton">Submit</button>
+    <hr>
+
+    <h2>How many fingers</h2>
+    <p>How many fingers an I holding up?</p>
+    <input type="text" placeholder="Guess here" id="guessInput">
+    <button id="guessButton">Guess</button>
+    <hr>
+
+    <h2>For Loops</h2>
+    <div id=tweetDiv></div>
+
+
+    <script type="text/javascript">
+        //Internal Javascript
+        document.getElementById("text").innerHTML = "Hello Ted"; //Updates automatically.
+
+        document.getElementById("myButton").onclick = function () {
+            document.getElementById("text").innerHTML = "Hello Mutisya"; //Updates on click of button.
+        }
+
+        document.getElementById("myButton2").onclick = function () {
+            document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById(
+                    "secondParagraph")
+                .innerHTML + "awesome!"; //Appends text to an existing paragraph.
+        }
+
+        document.getElementById("myButton3").onclick = function () {
+            document.getElementById("emptyParagraph").innerHTML =
+                "Empty Paragraph"; //Adds any HTML that was non-existent before.
+        }
+
+        document.getElementById("styleText").onclick = function () { //Manipulates styles within Javascript.
+            document.getElementById("moreText").style.color = "red";
+            document.getElementById("moreText").style.fontSize = "50px";
+        }
+
+        document.getElementById("circleRed").onclick = function () { //Makes the circle dissapear.
+            document.getElementById("circleRed").style.display = "none"
+        }
+
+        document.getElementById("circleGreen").onclick = function () {
+            document.getElementById("circleGreen").style.display = "none"
+        }
+
+        document.getElementById("circleBlue").onclick = function () {
+            document.getElementById("circleBlue").style.display = "none"
+
+        }
+
+        //variables
+        var x = 5;
+        x = 20;
+        alert(x);
+
+        var name = "Ted"
+        alert(name);
+
+        document.getElementById("textChanger").onclick = function () {
+            var textEntered = ""
+            textEntered = document.getElementById("textInput").value;
+            document.getElementById("text2").innerHTML = textEntered;
+        }
+
+        //Arrays
+        var myArray = new Array(); //First way of making an array.
+        myArray[0] = "Pizza";
+        myArray[1] = "Chocolate";
+
+        var tweet = ["Morning Everybody", "I love coffee"]; //Second way of making an array
+        //console.log is important in javascript.
+        tweet.push("Back to work"); // Adding to an array.
+        tweet.splice(1, 2) //Deleting from an array.
+        tweet.splice(1, 0, "Cornflakes for Breakfast"); //Adding in between arrays.
+        tweet.splice(1, 1, "Cornflakes for breakfast again") //Replacing items in an array.
+
+
+        console.log(tweet);
+
+        alert(tweet[1]);
+
+        //IF Statements
+        var x = 1;
+        if (x == 1) {
+            alert("X is one");
+        } else {
+            alert("x is not one")
+        }
+
+        document.getElementById("magicWordButton").onclick = function () {
+            var magicWord = "Alohomora";
+            if (magicWord == document.getElementById("magicWordInput").value) {
+                alert("Welcome to Hogwarts");
+            } else {
+                alert("Filthy Muggles");
+            }
+        }
+
+        document.getElementById("guessButton").onclick = function () {
+            var howManyFingers = Math.floor((Math.random() * 6) + 1); //generate a random number between 1 & 5
+            if (howManyFingers == document.getElementById("guessInput").value) {
+                alert("Well Done");
+            } else {
+                alert("The correct answer was " + howManyFingers + ". Try Again.");
+            }
+        }
+
+        //For Loops
+
+        var tweetString = ""; //Always add a value to a variable.
+        var tweets = ["Hi everyone", "I love cornflakes", "Nighty Night", "Sweet Dreams"]
+
+        for (var i = 0; i < tweets.length; i++) { //looping through the array.
+            tweetString = tweetString + "<p>" + tweets[i] + "</p>"
+            document.getElementById("tweetDiv").innerHTML = tweetString
+        }
+    </script>
+</body>
+
+</html>
