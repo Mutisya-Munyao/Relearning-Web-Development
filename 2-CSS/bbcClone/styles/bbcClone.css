@@ -193,7 +193,7 @@ h3 a:hover{
     float: left;
 }
 
-#topicLink{
+.topicLink{
     color: #a91717;
     text-decoration: none;
     border-left: 1px solid #e4e4e4;
@@ -210,8 +210,9 @@ h3 a:hover{
     text-decoration: underline;
 }
 
-#date{
+.date{
     padding-right: 10px;
+    color: #5a5a5a;
 }
 
 #articleContainer{
@@ -229,4 +230,55 @@ h3 a:hover{
 #articleHR{
     border-top: 1px solid #a91717;
     width: 50px;
+}
+
+#watchListen{
+    margin-left: 20px;
+    width: 280px;
+    float: right;
+    position: relative;
+    right: 100px;
+    bottom: 20px
+}
+
+h4{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.articleSideImage{
+    float: left;
+    width: 90px;
+    margin-right: 10px;
+}
+
+.watchListenLink{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#watchListen a:hover{
+    color: #1167a8;
+}
+
+.sideArticle{
+    float: right;
+    width: 180px;
+    position: relative;
+    top: -18px;
+}
+
+.fas{
+    color:#5a5a5a;
+}
+
+.noBorder2{
+    border-left: none;
+    padding: 0;
+}
+
+.borderRight{
+    border-right: 1px solid #e4e4e4;
 }
