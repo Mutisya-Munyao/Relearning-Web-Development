@@ -1,5 +1,5 @@
 body{
-    font-family: Helvetica, sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif;
     font-size: 150%;
     background-image: url(../images/background.jpg);
 }
@@ -101,6 +101,11 @@ body{
  :-moz-placeholder { /* Firefox 18- */
     color: grey;
     font-size: 20px;
+ }
+
+ #errorMessage{
+     position: relative;
+     top: 200px;
  }
 
  

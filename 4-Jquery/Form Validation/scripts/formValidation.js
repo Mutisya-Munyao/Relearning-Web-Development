@@ -13,7 +13,7 @@ $("#signUpButton").click(function () {
     var fieldsMissing = "";
 
     if ($("#email").val() == "") {
-        fieldsMissing += "<br>email";
+        fieldsMissing += "<br>Email";
     }
 
     if ($("#phoneNumber").val() == "") {
@@ -28,8 +28,8 @@ $("#signUpButton").click(function () {
         fieldsMissing += "<br>Confirm Password";
     }
 
-    if ($(fieldsMissing) != "") {
-        errorMessage += "<p>The following field(s) are missing:</p>" + fieldsMissing;
+    if (fieldsMissing != "") {
+        errorMessage += "<p>The following field(s) are missing: </p>" + fieldsMissing;
     }
 
 
@@ -67,7 +67,6 @@ $("#signUpButton").click(function () {
     if (errorMessage != "") {
         $("#errorMessage").html(errorMessage);
     } else {
-        alert("This is working");
         $("#errorMessage").hide();
     }
 });
