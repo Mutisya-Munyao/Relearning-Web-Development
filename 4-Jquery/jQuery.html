@@ -8,20 +8,172 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link rel="stylesheet" type="text/css" href="styles/reactionTester.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+        #greenCircle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 10px;
+        }
+
+        .redSquare {
+            width: 150px;
+            height: 150px;
+            background: red;
+            margin: 10px;
+        }
+
+        #greenCircleTwo{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 10px;
+        }
+
+        #greenCircleThree{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: blue;
+            margin: 10px;
+        }
+
+        #circleOne{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: brown;
+            margin: 10px;
+        }
+        
+    </style>
 
 </head>
 
 <body>
+
+    <h2>Detecting a click</h2>
+    <div class="redSquare" id="squareOne"></div>
+    <div class="redSquare" id="squareTwo"></div>
+    <hr>
+
+    <h2>Changing Website Content</h2>
+    <div id="greenCircle"></div>
+    <p>This is some text.</p>
+    <iframe src="https://www.codestars.com/"></iframe>
+    <hr>
+
+    <h2>Changing Website Styles</h2>
+    <div id="greenCircleTwo"></div>
+    <hr>
+
+    <h2>Fading Out Content</h2>
+    <div id="greenCircleThree"></div>
+    <button id="buttonOne">Fade Out</button>
+    <button id="buttonTwo">Fade In</button>
+    <p id="someText">Paragraph With Some Text</p>
+    <button id="buttonThree">Vanish</button>
+    <p id="someMoreText">Paragraph with some more text.</p>
+    <button id="buttonFour">Appear</button>
+    <p id="evenMoreText">Paragraph with some even more text.</p>
+    <button id="buttonFive">Do Magic</button>
+    <hr>
+
+    <h2>Animating Content</h2>
+    <div id="circleOne"></div>
+    <hr>
+
+    <h2>Ajax</h2>
+    <p id="ajaxAppend"></p>
+    <hr>
+
+    <h2>Regular Expressions</h2>
+
+    <hr>
+
     <script type="text/javascript">
-    if (typeof jQuery == "undefined"){
-        alert("jQuery is not installed")
-    } else{
-        alert("jQuery is installed")
-    }
+        $(".redSquare").click(function () { //Detecting a click.
+            alert("Square Was Clicked");
+        });
+
+        $("#greenCircle").click(function () { //Changing Website Content on click.
+            $("p").html("This text has changed");
+            alert($("p").html()); //Getting the html of an element.
+        });
+
+        $("#greenCircle").hover(function () { //Changing Website Content on hover.
+            $("p").html("This text has changed again.");
+        });
+
+        $("#greenCircle").hover(function () { //Same as above.
+            $("iframe").attr("src", "https://www.youtube.com")
+        });
+
+        $("#greenCircleTwo").click(function () {
+            alert("Hello");
+            $("#greenCircleTwo").css("width", "400px")//Changing Website Styles with jQuery.
+            $("#greenCircleTwo").css("background-color", "teal");
+            alert($("#greenCircleTwo").css("background-color"));//Returns the background color of an element.
+            alert($("body").css("width"));
+            $(this).css("display", "none");//Hiding elements with jQuery.
+            alert("You clicked on a " + $(this).attr("id"))
+        });
+
+        $(".redSquare").click(function (){
+            $(this).hide(1200, "swing");//Hiding elements a different way with jQuery.
+            alert("You clicked on a " + $(this).attr("id"))
+        });
+
+        $("#buttonOne").click(function () {
+            $("#greenCircleThree").fadeOut(1000, "swing", function(){//Fading out elements in jQuery.
+                alert("Fadeout has finished.")
+            }); 
+        });
+
+        $("#buttonTwo").click(function () {
+            $("#greenCircleThree").fadeIn(1000, "swing"); //Fading in elements in jQuery.
+        });
+
+        $("#buttonThree").click(function () {
+            $("#someText").fadeOut(1000, "swing");
+        });
+
+        $("#someMoreText").hide();
+        $("#buttonFour").click(function () {
+            $("#someMoreText").fadeIn(1000, "swing");
+        });
+
+        $("#buttonFive").click(function(){
+            $("#evenMoreText").fadeToggle(1000);//Toggles in between fade out & fade in.
+        });
+
+        $("#circleOne").click(function(){//Animating in jQuery.
+            $(this).animate({ //This is an array.
+                width: "400px", 
+                height: "400px",
+                marginLeft: "100px",
+                marginTop: "100px"
+            }, 2000, function(){
+                alert("It is done.");
+                $(this).css("background-color", "teal");
+            });
+        });
+
+        $.ajax("info.text").done(function(data){//AJAX
+            $(ajaxAppend).html(data);
+        })
+        .fail(function(){
+            alert("Could not get data.")
+        });
+
+        var regex = /is/; //regex
+        var string = "Regex is great!";
+        var result = string.match(regex);
+            alert (result);
     </script>
 </body>
 

@@ -11,7 +11,7 @@
     <style type="text/css">
         .circle {
             width: 130px;
-            height: 130px;
+            height: 130px;  
             border-radius: 50%;
             margin-right: 50px;
         }
@@ -59,7 +59,7 @@
     <button id="buttonInput">Submit</button>
     <hr>
 
-    <h2>IF Statements</h2>
+    <h2>If Statements</h2>
     <p>What is the magic word?</p>
     <input type="text" placeholder="Magic Word Here" id="magicWordInput">
     <button id="magicWordButton">Submit</button>
@@ -141,6 +141,8 @@
             document.getElementById("text2").innerHTML = textEntered;
         }
 
+        var y = prompt();//Prompts the user for an input.
+
         //Arrays
         var myArray = new Array(); //First way of making an array.
         myArray[0] = "Pizza";
@@ -163,7 +165,7 @@
 
 
 
-        //IF Statements
+        //If Statements
         var x = 1;
         if (x == 1) {
             alert("X is one");
@@ -241,12 +243,44 @@
         }
         alertMe();
 
-        function average(a, b) {
+        function average(a, b) { //function declaration
             return ((a + b) / 2);
         }
         var x = 5;
         var y = 10;
         alert(average(x, y));
+
+        function greet(name, lastName){ //lastName here is a parameter.
+            console.log("Hello " + name + lastName);
+
+        }
+
+        greet("Ted", " Mutisya"); //Ted here is an argument.
+        greet("Jeff", " Kitonyi");
+        
+        const speak = function (jina = "Mutisya"){ //Function expression
+            console.log("Good Day " + jina);
+        };
+
+        speak();
+
+        //Regular Function
+        const calcArea = function(radius){
+            let area = 3.14 * radius ** 2;
+            return area;
+        };
+
+        const area = calcArea(5);
+        console.log(area);
+
+        //Arrow Function
+        const calcAreaTwo = (radius) => { //Parenthesis are not necessary for one parameter.    
+            return 3.14 * radius ** 2;
+        };
+
+        const areaTwo = calcAreaTwo(7);
+        console.log(areaTwo);
+
     </script>
 </body>
 
