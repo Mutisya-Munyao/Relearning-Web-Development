@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Code Player</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/codePlayer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div id="navBar">
+            <h3>Code Player</h3>
+            <button id="htmlButton" type="button">HTML</button>
+            <button id="cssButton" type="button">CSS</button>
+            <button id="javascriptButton" type="button">Javascript</button>
+            <button id="outputButton" type="button">Output</button>
+        </div>
+    </header>
+
+    <section>
+        <textarea id="htmlTextarea" placeholder="Type your HTML in here" class="textarea"></textarea>
+
+        <textarea id="cssTextarea" placeholder="Type your CSS in here" class="textarea"></textarea>
+
+        <textarea id="javascriptTextarea" placeholder="Type your javascript in here" class="textarea"></textarea>
+
+        <iframe id="output" class="textarea"></iframe>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/codePlayer.js"></script>
+    <script type="text/javascript"src="scripts/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</body>
+
+</html>

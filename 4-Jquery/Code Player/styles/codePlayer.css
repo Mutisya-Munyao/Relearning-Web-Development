@@ -1,0 +1,62 @@
+body {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 17.5px;
+}
+
+#navBar{
+    background-color: #eeeeee;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3{
+    position: absolute;
+    left: 10px;
+}
+
+button{
+    border: black 0.5px solid;
+}
+
+button:hover{
+    background-color: #757575;
+    cursor: pointer;
+    color: white;
+}
+
+#htmlButton{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0px;
+}
+
+#cssButton, #javascriptButton{
+    border-right: 0px;
+}
+
+#outputButton{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.clicked {
+    background-color: rgb(132, 226, 255);
+  }
+
+textarea {
+    width: 335px;
+    height: 585px;
+    display: none;
+    float: left;
+  }
+
+  iframe{
+    width: 335px;
+    height: 585px;
+    float: left;
+  }
+
+
+
