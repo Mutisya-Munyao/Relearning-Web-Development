@@ -54,8 +54,11 @@ textarea {
 
   iframe{
     width: 335px;
-    height: 585px;
+    height: 589px;
     float: left;
+    display: none;
+    border: 1px solid black;
+    background-color: #f8f8f8;
   }
 
 

@@ -22,5 +22,5 @@ $('button').click(function () {
   });
   
   $('#outputButton').click(function () {
-    $('#outputTextarea').toggle();
+    $('#output').toggle();
   });
